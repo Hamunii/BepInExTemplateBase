@@ -24,7 +24,7 @@
 
   <!-- NuGet fallback stripped game references -->
   <ItemGroup Condition="!Exists('$(ManagedDir)')">
-    <PackageReference Include="UnityEngine.Modules" Version="6000.0.36" PrivateAssets="all" />
+    <PackageReference Include="LethalCompany.GameLibs.Steam" Version="*-*" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- Local game references -->
