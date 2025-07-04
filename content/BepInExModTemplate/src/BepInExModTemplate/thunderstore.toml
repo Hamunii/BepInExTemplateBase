@@ -36,9 +36,9 @@ target = "/"
 [publish]
 # See communities at:
 # https://thunderstore.io/api/experimental/community/
-communities = [ "_ThunderstoreGameIdentifier_", ]
+communities = [ "lethal-company", ]
 
 [publish.categories]
 # See categories at:
-# https://thunderstore.io/api/experimental/community/_ThunderstoreGameIdentifier_/category/
-_ThunderstoreGameIdentifier_ = [ "mods", ]
+# https://thunderstore.io/api/experimental/community/lethal-company/category/
+lethal-company = [ "mods", ]
