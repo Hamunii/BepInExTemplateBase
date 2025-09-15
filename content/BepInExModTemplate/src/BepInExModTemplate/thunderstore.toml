@@ -36,9 +36,9 @@ target = "/"
 [publish]
 # See communities at:
 # https://thunderstore.io/api/experimental/community/
-communities = [ "_ThunderstoreGameIdentifier_", ]
+communities = [ "hollow-knight-silksong", ]
 
 [publish.categories]
 # See categories at:
-# https://thunderstore.io/api/experimental/community/_ThunderstoreGameIdentifier_/category/
-_ThunderstoreGameIdentifier_ = [ "mods", ]
+# https://thunderstore.io/api/experimental/community/hollow-knight-silksong/category/
+hollow-knight-silksong = [ "mods", ]
