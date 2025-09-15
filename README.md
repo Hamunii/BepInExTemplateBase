@@ -1,6 +1,6 @@
-# BepInEx Template for _GameName_
+# BepInEx Template for Hollow Knight Silksong
 
-- [BepInEx Template for _GameName_](#bepinex-template-for-gamename)
+- [BepInEx Template for Hollow Knight Silksong](#bepinex-template-for-hollow-knight-silksong)
   - [Installing](#installing)
     - [From NuGet (Recommended)](#from-nuget-recommended)
     - [Manually](#manually)
@@ -9,16 +9,6 @@
     - [Setting Up The Config File](#setting-up-the-config-file)
     - [Thunderstore Packaging](#thunderstore-packaging)
     - [GitHub Actions Publishing](#github-actions-publishing)
-
-Template creator: After forking, replace the following, e.g.:
-
-- `_GameName_` → `Lethal Company` (name from Steam directory)
-- `_GameNameNoSpaces_` → `LethalCompany` (name with spaces removed)
-- `_GameNameShortNoSpacesLowercase_` → `lc` (used for template `shortName`)
-- `_TemplateAuthorNoSpaces_` → `LethalCompanyModding` (GitHub repo & NuGet package prefix)
-- `_ThunderstoreGameIdentifier_` → `lethal-company` (see: <https://thunderstore.io/api/experimental/community/>)
-
-You can then remove this section from the README.
 
 ## Installing
 
@@ -32,7 +22,7 @@ You can then remove this section from the README.
 Run the following command:
 
 ```bash
-dotnet new install _TemplateAuthorNoSpaces_.BepInExTemplate
+dotnet new install Hamunii.Silksong.BepInExTemplate
 ```
 
 > [!TIP]  
@@ -62,17 +52,17 @@ To uninstall:
 dotnet new uninstall .
 ```
 
-Once installed, the template will be available as `_GameName_ BepInEx Plugin` with an alias `_GameNameShortNoSpacesLowercase_mod`.
+Once installed, the template will be available as `Hollow Knight Silksong BepInEx Plugin` with an alias `silkmod`.
 
 ## Creating a Project
 
-Open a terminal in your _GameName_ modding directory, and run:
+Open a terminal in your Hollow Knight Silksong modding directory, and run:
 
 > [!NOTE]  
 > You should [set up a Thunderstore team first](<https://thunderstore.io/settings/teams/create/>) so you can use its name in the optional `--ts-team` argument so the template can give you a mostly correctly configured packaging setup.
 
 ```sh
-dotnet new _GameNameShortNoSpacesLowercase_mod --output ModName --guid com.github.YourAccount.ModName --ts-team YourThunderstoreTeam
+dotnet new silkmod --output ModName --guid com.github.YourAccount.ModName --ts-team YourThunderstoreTeam
 ```
 
 > [!TIP]  
@@ -80,7 +70,7 @@ dotnet new _GameNameShortNoSpacesLowercase_mod --output ModName --guid com.githu
 >
 > You can also use `--no-tutorial` to get rid of tutorial comments in the template. Note that this doesn't get rid of _all_ comments.
 >
-> You can run `dotnet new _GameNameShortNoSpacesLowercase_mod --help` to see all available options.
+> You can run `dotnet new silkmod --help` to see all available options.
 
 This will create a new directory with the mod name which contains the project.
 
@@ -91,11 +81,11 @@ You now have a (mostly) working setup. See [Setting Up The Config File](#setting
 This example demonstrates what files should appear and where:
 
 ```sh
-~/Workspace/_GameNameNoSpaces_$ dotnet new _GameNameShortNoSpacesLowercase_mod --output MyCoolMod --guid com.github._TemplateAuthorNoSpaces_.MyCoolMod --ts-team _TemplateAuthorNoSpaces_
-The template "_GameNameNoSpaces_ BepInEx Plugin" was created successfully.
+~/Workspace/Silksong$ dotnet new silkmod --output MyCoolMod --guid com.github.Hamunii.MyCoolMod --ts-team Hamunii
+The template "Silksong BepInEx Plugin" was created successfully.
 
-~/Workspace/_GameNameNoSpaces_$ cd MyCoolMod/
-~/Workspace/_GameNameNoSpaces_/MyCoolMod$ tree
+~/Workspace/Silksong$ cd MyCoolMod/
+~/Workspace/Silksong/MyCoolMod$ tree
 .
 ├── CHANGELOG.md
 ├── Config.Build.user.props.template
