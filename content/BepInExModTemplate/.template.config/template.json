@@ -2,7 +2,7 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "_TemplateAuthorNoSpaces_",
     "classifications": [
-        "Console"
+        "BepInEx", "Plugin", "Mod"
     ],
     "guids": [
         "725F983D-24CD-4EC1-A08A-FEF64D1A04D0",
