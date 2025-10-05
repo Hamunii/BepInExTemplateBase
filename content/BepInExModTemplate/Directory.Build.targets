@@ -43,7 +43,14 @@
 
   <!-- NuGet fallback stripped game references -->
   <ItemGroup Condition="!Exists('$(ManagedDir)')">
-    <PackageReference Include="UnityEngine.Modules" Version="6000.0.36" PrivateAssets="all" />
+<!--#if (!no-tutorial) -->
+  <!--
+    To reference a a version of the GameLibs package other than the latest,
+    you can specify the version of the package:
+    https://www.nuget.org/packages/Silksong.GameLibs/#versions-body-tab
+  -->
+<!--#endif -->
+    <PackageReference Include="Silksong.GameLibs" Version="*-*" />
   </ItemGroup>
 
   <!-- Local game references -->
