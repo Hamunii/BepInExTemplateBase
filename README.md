@@ -25,7 +25,7 @@ You can then remove this section from the README.
 .NET templates must be installed before they can be used. This means that when you install the template, it doesn't create a new project for you, but now you have the ability to do that.
 
 > [!NOTE]  
-> You must use .NET SDK 8 or newer to use this template. Older SDK versions are out of support.
+> You must use .NET SDK 10 or newer to use this template. You can check your .NET SDK version by running the following in a terminal: `dotnet --version`. To download .NET SDK, see: <https://dotnet.microsoft.com/en-us/download>
 
 ### From NuGet (Recommended)
 
