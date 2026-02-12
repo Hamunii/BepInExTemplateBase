@@ -103,7 +103,7 @@ The template "_GameNameNoSpaces_ BepInEx Plugin" was created successfully.
 ├── Directory.Build.targets
 ├── icon.png
 ├── LICENSE
-├── MyCoolMod.sln
+├── MyCoolMod.slnx
 ├── README.md
 └── src
     └── MyCoolMod

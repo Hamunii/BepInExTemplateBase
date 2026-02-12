@@ -69,10 +69,37 @@
     <Reference Include="$(ManagedDir)Assembly-CSharp.dll" Private="false" Publicize="true" />
   </ItemGroup>
 
+  <!-- Copy mod files defined in projects to the target BepInEx directory -->
+  <Target
+    Name="DeployFiles"
+    AfterTargets="Build"
+    Condition="'$(DeployModFilesEnabled)' == 'true'"
+  >
+    <PropertyGroup>
+      <_TargetDir>$([MSBuild]::NormalizeDirectory($(_GameNameNoSpaces_BepInExDir)))</_TargetDir>
+    </PropertyGroup>
+    <Message
+      Text="Deploy → @(DeployModFiles -> '%(BepInExDir)%(FileName)%(Extension)')"
+      Importance="High"
+    />
+    <Error
+      Text="BepInEx directory '$(_TargetDir)' doesn't exist! Configure _GameNameNoSpaces_BepInExDir to point to a valid path in the Config.Build.user.props file."
+      Condition="!Exists('$(_TargetDir)')"
+    />
+    <Copy
+      SourceFiles="@(DeployModFiles)"
+      DestinationFolder="$(_TargetDir)%(BepInExDir)"
+    />
+  </Target>
+
   <!--
     To make building Thunderstore packages uncoupled from release builds, swap
     the positions of this Target line:
-    <Target Name="PackTS" DependsOnTargets="Build" Condition="'$(ThunderstorePackable)' != 'false'">
+    <Target
+      Name="PackTS"
+      DependsOnTargets="Build"
+      Condition="'$(ThunderstorePackable)' != 'false'"
+    >
     and the one below.
 
     If you uncouple Thunderstore package builds from release builds, you can build
@@ -80,7 +107,11 @@
 
     Publish to Thunderstore by including `-property:PublishTS=true` in the command.
   -->
-  <Target Name="PackTS" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' And '$(ThunderstorePackable)' != 'false'">
+  <Target
+    Name="PackTS"
+    AfterTargets="Build"
+    Condition="'$(Configuration)' == 'Release' And '$(ThunderstorePackable)' != 'false'"
+  >
     <Error
       Text=" PackTS must be called with Release configuration."
       Condition="'$(Configuration)' != 'Release'"
