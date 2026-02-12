@@ -27,7 +27,7 @@
 <!--#endif -->
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
-    <PackageReference Include="Hamunii.BepInEx.AutoPlugin" Version="2.0.*" PrivateAssets="all" />
+    <PackageReference Include="Hamunii.BepInEx.AutoPlugin" Version="2.1.*" PrivateAssets="all" />
 <!--#if (!no-tutorial) -->
     <!-- Source-only polyfills for C# language features https://github.com/Sergio0694/PolySharp -->
 <!--#endif -->
