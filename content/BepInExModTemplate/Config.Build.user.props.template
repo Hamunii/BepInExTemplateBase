@@ -1,19 +1,12 @@
 <Project>
-
   <PropertyGroup>
     <!-- Set if the default steam game install directory doesn't work. -->
     <!-- <_GameNameNoSpaces_GameRootDir></_GameNameNoSpaces_GameRootDir> -->
-    <!-- Set if your BepInEx/plugins/ directory isn't in the game files. -->
-    <!-- <_GameNameNoSpaces_PluginsDir></_GameNameNoSpaces_PluginsDir> -->
+
+    <!-- Set if your BepInEx/ directory isn't in the game files. -->
+    <!-- <_GameNameNoSpaces_BepInExDir></_GameNameNoSpaces_BepInExDir> -->
+
+    <!-- Enable/disable deploying mod files to BepInEx directory. -->
+    <DeployModFilesEnabled>true</DeployModFilesEnabled>
   </PropertyGroup>
-
-  <Target Name="DeployFiles" AfterTargets="Build">
-    <Message Text="Deploy → $(_GameNameNoSpaces_PluginsDir)$(AssemblyName).dll" Importance="High" />
-    <Error
-      Text="Plugins directory '$([MSBuild]::NormalizeDirectory($(_GameNameNoSpaces_PluginsDir)))' doesn't exist! Configure _GameNameNoSpaces_PluginsDir to point to a valid path in the Config.Build.user.props file."
-      Condition="!Exists('$(_GameNameNoSpaces_PluginsDir)')"
-    />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_GameNameNoSpaces_PluginsDir)" />
-  </Target>
-
 </Project>
