@@ -42,6 +42,7 @@
     <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview -->
 <!--#endif -->
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>recommended</AnalysisMode>
 <!--#if (!no-tutorial) -->
     <!-- Build, and other generated files go nicely into artifacts/ directory. -->
 <!--#endif -->
