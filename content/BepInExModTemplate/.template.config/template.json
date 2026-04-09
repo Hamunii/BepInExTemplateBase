@@ -6,7 +6,7 @@
     ],
     "identity": "com.github.LethalCompanyModding.BepInExTemplate",
     "name": "Lethal Company BepInEx Plugin",
-    "shortName": "_GameNameShortNoSpacesLowercase_mod",
+    "shortName": "lcmod",
     "tags": {
         "language": "C#",
         "type": "project"
