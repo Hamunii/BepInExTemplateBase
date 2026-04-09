@@ -1,11 +1,11 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "_TemplateAuthorNoSpaces_",
+    "author": "LethalCompanyModding",
     "classifications": [
         "BepInEx", "Plugin", "Mod"
     ],
-    "identity": "com.github._TemplateAuthorNoSpaces_.BepInExTemplate",
-    "name": "_GameName_ BepInEx Plugin",
+    "identity": "com.github.LethalCompanyModding.BepInExTemplate",
+    "name": "Lethal Company BepInEx Plugin",
     "shortName": "_GameNameShortNoSpacesLowercase_mod",
     "tags": {
         "language": "C#",
