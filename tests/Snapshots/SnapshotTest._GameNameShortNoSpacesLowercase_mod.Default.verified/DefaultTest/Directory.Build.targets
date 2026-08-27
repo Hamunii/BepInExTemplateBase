@@ -39,7 +39,7 @@
     <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
     <PackageReference Include="Hamunii.BepInEx.AutoPlugin" Version="2.1.*" PrivateAssets="all" />
     <!-- Source-only polyfills for C# language features https://github.com/Sergio0694/PolySharp -->
-    <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
 <!-- __TEMPLATE_CONFIG_IF(GameLibsAvailable)__ -->
 <!-- __TEMPLATE_CONFIG_ENDIF__ -->
   </ItemGroup>

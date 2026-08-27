@@ -22,7 +22,7 @@
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" />
     <PackageReference Include="Hamunii.BepInEx.AutoPlugin" Version="2.1.*" PrivateAssets="all" />
-    <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
 <!-- __TEMPLATE_CONFIG_IF(GameLibsAvailable)__ -->
     <PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="all" />
 <!-- __TEMPLATE_CONFIG_ENDIF__ -->
