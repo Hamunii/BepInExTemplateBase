@@ -47,7 +47,7 @@
 <!--#if (!no-tutorial) -->
     <!-- Source-only polyfills for C# language features https://github.com/Sergio0694/PolySharp -->
 <!--#endif -->
-    <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
 <!-- __TEMPLATE_CONFIG_IF(GameLibsAvailable)__ -->
 <!--#if (github-workflow) -->
     <PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="all" />
