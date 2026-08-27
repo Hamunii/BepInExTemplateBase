@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 // Configure the following values:
 
 // Name from Steam directory
-
 const string GameName = "Lethal Company";
 
 // Name with spaces removed. Used for MSBuild properties & readme example
