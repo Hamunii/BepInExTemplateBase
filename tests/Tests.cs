@@ -1,4 +1,5 @@
 using DiffEngine;
+using EmptyFiles;
 using Microsoft.Extensions.Logging;
 using Microsoft.TemplateEngine.Authoring.TemplateVerifier;
 using Xunit.Abstractions;
@@ -7,6 +8,16 @@ namespace Template.Tests;
 
 public class BepInExTemplateTest(ITestOutputHelper output)
 {
+    static BepInExTemplateTest()
+    {
+        // Without this nothing seems to be used?
+        // Idk if this is bad for people who don't use vscode,
+        // but it's really useful for me.
+        DiffTools.UseOrder(DiffTool.VisualStudioCode);
+
+        // Also the diff tool doesn't understand that .targets files are text files???
+        FileExtensions.AddTextExtension("targets");
+    }
     private readonly ILogger logger = output.BuildLoggerFor<BepInExTemplateTest>();
 
     [Theory]
