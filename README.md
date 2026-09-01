@@ -164,7 +164,7 @@ The wildcard at the beginning of the glob `*[0-9]+.[0-9]+.[0-9]+` is for if you 
 
 1. Get your Thunderstore API token:  
    - Log in to <https://thunderstore.io/> > `Settings` > `Teams` > `[select your team, create new if necessary]` > `Service Accounts` > `Add Service Account` > `[name it something like 'github' and confirm]` > `[keep the page open until you need to copy and paste the api token in the next step]`
-2. Create a new secret named `THUNDERSTORE_API_TOKEN` on GitHub with the Thunderstore API token as its contentsj
+2. Create a new secret named `THUNDERSTORE_API_TOKEN` on GitHub with the Thunderstore API token as its contents
    - Setting a GitHub secret: <https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets>
 3. If the `--library` option was used, get your NuGet API key and create a new secret named `NUGET_API_KEY` on GitHub with the API key as its contents
    - Getting NuGet API key: <https://learn.microsoft.com/en-us/nuget/nuget-org/publish-a-package#create-an-api-key>
